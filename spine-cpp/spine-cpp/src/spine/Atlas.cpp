@@ -94,6 +94,11 @@ AtlasRegion *Atlas::findRegion(const String &name) {
 	return NULL;
 }
 
+spine::Vector<spine::AtlasRegion*> Atlas::getRegions()
+{
+	return _regions;	
+}
+
 Vector<AtlasPage*> &Atlas::getPages() {
 	return _pages;
 }

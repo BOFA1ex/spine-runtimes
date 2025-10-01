@@ -112,7 +112,8 @@ public:
 	/// should be cached rather than calling this method multiple times.
 	/// @return The region, or NULL.
 	AtlasRegion *findRegion(const String &name);
-
+	spine::Vector<spine::AtlasRegion*> getRegions();
+	
 	Vector<AtlasPage*> &getPages();
 
 private:

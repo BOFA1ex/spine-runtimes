@@ -62,7 +62,7 @@ namespace spine {
 
 		float getCurveType(size_t frameIndex);
 
-	protected:
+	public:
 		static const float LINEAR;
 		static const float STEPPED;
 		static const float BEZIER;

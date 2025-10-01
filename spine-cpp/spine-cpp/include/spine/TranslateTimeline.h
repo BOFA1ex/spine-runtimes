@@ -54,6 +54,15 @@ namespace spine {
 
 		virtual int getPropertyId();
 
+		int getBoneIndex()
+		{
+			return _boneIndex;	
+		}
+
+		Vector<float> &getFrames() {
+			return _frames;
+		}
+
 		/// Sets the time and value of the specified keyframe.
 		void setFrame(int frameIndex, float time, float x, float y);
 
