@@ -472,7 +472,12 @@ SkeletonData *SkeletonJson::readSkeletonData(const char *json) {
 				skeletonData->_defaultSkin = skin;
 			}
 
-			for (attachmentsMap = Json::getItem(skinMap, "attachments")->_child; attachmentsMap; attachmentsMap = attachmentsMap->_next) {
+			attachmentsMap = Json::getItem(skinMap, "attachments");
+			if (attachmentsMap) {
+				attachmentsMap = attachmentsMap->_child;
+			}
+			
+			for (; attachmentsMap; attachmentsMap = attachmentsMap->_next) {
 				SlotData* slot = skeletonData->findSlot(attachmentsMap->_name);
 				Json *attachmentMap;
 
