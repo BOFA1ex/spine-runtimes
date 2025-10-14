@@ -180,3 +180,7 @@ void TwoColorTimeline::setSlotIndex(int inValue) {
 	assert(inValue >= 0);
 	_slotIndex = inValue;
 }
+
+Vector<float> &TwoColorTimeline::getFrames() {
+	return _frames;
+}

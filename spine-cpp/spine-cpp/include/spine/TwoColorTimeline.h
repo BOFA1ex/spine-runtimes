@@ -54,6 +54,8 @@ namespace spine {
 
 		int getSlotIndex();
 		void setSlotIndex(int inValue);
+		
+		Vector<float>& getFrames();
 
 	private:
 		static const int PREV_TIME;

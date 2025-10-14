@@ -225,6 +225,12 @@ public:
 
 	void setActive(bool inValue);
 
+	/// Computes the individual applied transform values from the world transform. This can be useful to perform processing using
+	/// the applied transform after the world transform has been modified directly (eg, by a constraint)..
+	///
+	/// Some information is ambiguous in the world transform, such as -1,-1 scale versus 180 rotation.
+	void updateAppliedTransform();
+
 private:
 	static bool yDown;
 
@@ -240,11 +246,6 @@ private:
 	bool _sorted;
 	bool _active;
 
-	/// Computes the individual applied transform values from the world transform. This can be useful to perform processing using
-	/// the applied transform after the world transform has been modified directly (eg, by a constraint)..
-	///
-	/// Some information is ambiguous in the world transform, such as -1,-1 scale versus 180 rotation.
-	void updateAppliedTransform();
 };
 }
 
