@@ -510,6 +510,7 @@ void Bone::updateAppliedTransform() {
 		_ascaleY = MathUtil::sqrt(_b * _b + _d * _d);
 		_ashearX = 0;
 		_ashearY = MathUtil::atan2Deg(_a * _b + _c * _d, _a * _d - _b * _c);
+		return;
 	}
 	float pa = parent->_a, pb = parent->_b, pc = parent->_c, pd = parent->_d;
 	float pid = 1 / (pa * pd - pb * pc);
