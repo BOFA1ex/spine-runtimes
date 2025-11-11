@@ -145,8 +145,8 @@ void Skeleton::updateCache() {
 
 	for (size_t i = 0, n = _bones.size(); i < n; ++i) {
 		Bone *bone = _bones[i];
-		bone->_sorted = bone->_data.isSkinRequired();
-		bone->_active = !bone->_sorted;
+		bone->_sorted = false;
+		bone->_active = true;
 	}
 
 	if (_skin) {
